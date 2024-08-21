@@ -1,36 +1,28 @@
 import {useState} from 'react'
 import {Routes, Route} from 'react-router-dom'
+
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 import Home from './pages/home'
 import About from './pages/About'
 import Contact from './pages/Contact'
 
-
 function App() {
-  const title = 'My Portfolio'
-  const [page, setPage] = useState('Home')
-
-  const renderPage = (pageName) => {
-    switch(pageName) {
-      case 'Home':
-        return <Home />
-      case 'About':
-        return <About />
-      default:
-        return <Contact />
-    }
-  }
-
-
- 
+ const title = 'My Portfolio'
   return (
     <>
-      <Header title={title} setPage={setPage} page = {page} />
+      <Header title={title}  />
+    <main className="flex-1">
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+      </Routes>
+      </main>
 
-      
-
-      {renderPage(page)}
+      <Footer />
+     
     </>
 
   )

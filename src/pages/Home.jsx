@@ -1,7 +1,11 @@
 function Home () {
     return (
         <>
-        <h1>Home</h1>
+        <div className="home-hero row justify-center">
+            <img src="/images/me.jpg" alt=""></img>
+            
+        </div>
+        <h1 className="text-center">Me</h1>
         </>
     )
 }

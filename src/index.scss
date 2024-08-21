@@ -2,16 +2,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
-html,  body {
+html,  body, #root {
   height: 100%;
 }
 
 a {
   color: #333;
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
 }
 
 // GLOBAL CLASSES
@@ -27,8 +33,16 @@ a {
   justify-content: space-between;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .align-center {
   align-items: center;
+}
+
+.flex-1 {
+  flex:1;
 }
 
 .text-center {
@@ -53,3 +67,40 @@ header {
     }
   }
 }
+
+.home-hero {
+  img{
+    width: 50%;
+    margin-bottom: 15px;
+  }
+}
+
+main {
+  padding: 0 5%;
+}
+
+footer {
+  padding: 25px 5%;
+}
+
+form.contact-form {
+  margin: 15px auto 0;
+  width: 450px;
+  >* {
+    padding: 6px 10px;
+    border: none;
+    margin-bottom: 5px;
+    &:focus {
+      outline: 1px solid #b1f0ef;
+    }
+  }
+  input, textarea {
+    border: 1px solid #ccc;
+  }
+
+  button {
+    background: #32d8cb;
+    color:#eee
+  }
+}
+
